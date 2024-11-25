@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookmark.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="py-5">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="position-relative">Bookmarker</h1>
+        <div
+          class="bookmark-box fw-bold w-100 py-4 mt-5 mb-4 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2 class="text-center">
+            <i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite
+            sites<i class="fa-solid fa-bookmark ps-2"></i>
+          </h2>
+          <div class="w-100 px-2">
+            <label class="pb-2" for="bookmarkName"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="bookmarkName"
+              id="bookmarkName"
+              placeholder="Bookmark Name"
+            />
+          </div>
+          <div class="w-100 px-2">
+            <label class="pb-2" for="websiteURL"
+              ><i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="websiteURL"
+              id="websiteURL"
+              placeholder="Website URL"
+            />
+          </div>
+          <button class="btn btn-submit px-5 py2 text-white" onclick="getValue()">
+            Submit
+          </button>
+        </div>
+        <table class="table table-light table-hover">
+          <thead>
+            <tr class="text-center">
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
